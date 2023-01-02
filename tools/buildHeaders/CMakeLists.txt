@@ -1,26 +1,3 @@
-cmake_minimum_required(VERSION 2.8)
-
-set(CMAKE_INSTALL_PREFIX "install" CACHE STRING "prefix" FORCE)
-
-project(buildSpvHeaders)
-
-set(SOURCES
-    main.cpp
-    jsonToSpirv.cpp
-    header.cpp
-    jsoncpp/dist/jsoncpp.cpp)
-
-set(HEADERS
-    jsonToSpirv.h
-    header.h
-    jsoncpp/dist/json/json.h)
-
-if(CMAKE_COMPILER_IS_GNUCXX)
-    add_definitions(-std=c++11)
-elseif(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-    add_definitions(-std=c++11)
-endif()
-
-add_executable(buildSpvHeaders ${SOURCES} ${HEADERS})
-
-install(TARGETS buildSpvHeaders RUNTIME DESTINATION bin)
+version https://git-lfs.github.com/spec/v1
+oid sha256:c8d028549bab20ceeafb2551ecc966b76c0c57d88ae99d8c6b18ad6f4c552224
+size 553
